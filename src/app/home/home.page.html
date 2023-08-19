@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Lista de Compras - Pedro Daniel Brunetto 08906
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="floating">Nome do Produto</ion-label>
+    <ion-input [(ngModel)]="nomeProduto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Preço</ion-label>
+    <ion-input [(ngModel)]="preco" type="number"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="adicionarItem()">Adicionar</ion-button>
+
+  <div class="lista-container" (click)="checarRemocao($event)">
+    {{ textoLista }}
+  </div>
+
+  <ion-item>
+    <ion-label>Total:</ion-label>
+    <ion-badge>{{ total }}</ion-badge>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Média:</ion-label>
+    <ion-badge>{{ media }}</ion-badge>
+  </ion-item>
+</ion-content>
